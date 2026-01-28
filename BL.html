@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Giới thiệu tổ 2</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #c9e9ff, #f8faff);
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #0066cc;
+      margin-bottom: 30px;
+    }
+    .member {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .member:hover {
+      background: #eef7ff;
+      transform: translateX(5px);
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Thành viên tổ 2</h1>
+<div id="members"></div>
+
+<script>
+const members = [
+  { name: "Nguyễn Nam Cường", link: "cuong.html" },
+  { name: "Nguyễn Thành Nam", link: "nam.html" },
+  { name: "Đoàn Đăng Khôi", link: "khoi.html" },
+  { name: "Phan Tuấn Anh", link: "tuananh.html" },
+  { name: "Nguyễn Tiến Đạt", link: "dat.html" }
+,
+  { name: "Hà Công Thành Phát", link: "phat.html" },
+  { name: "Nguyễn Đăng Khoa", link: "khoa1.html" },
+  { name: "Nguyễn Duy Khoa", link: "khoa2.html" },
+  { name: "Nguyễn Khánh Hà", link: "ha.html" },
+  { name: "Đinh Thị Thanh Huyền", link: "dat.html" },
+  { name: "Nguyễn Cẩm Bình", link: "binh.html" },
+  { name: "Nguyễn Khánh Ly", link: "ly.html" }];
+
+const container = document.getElementById("members");
+
+members.forEach((m, index) => {
+  container.innerHTML += `
+    <div class="member" onclick="window.location.href='${m.link}'">
+      <strong>${index + 1}. ${m.name}</strong>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>
